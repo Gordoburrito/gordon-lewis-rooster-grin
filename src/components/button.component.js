@@ -5,6 +5,7 @@ export const Button = ({ button, ...other }) => {
   <a  className={`btn btn--${button.style}`} href={button.url} >
     {button.text}
   </a>
+  
   )
 }
 
