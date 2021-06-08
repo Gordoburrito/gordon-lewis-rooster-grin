@@ -1,11 +1,12 @@
 import React from "react"
+import "./happy-girl.css";
 
 import { StaticImage } from "gatsby-plugin-image"
 import { TitleHTMLBodyButton} from "./title-HTML-body-button.component"
 import { Column } from "./column.component"
 import {ColumnContainer} from "./column-container.component"
 
-export const ComputerFamily = ({title, body, button}) => {
+export const HappyGirl = ({title, body, button}) => {
   return (
     <div style={{ display: "grid" }}>
       {/* You can use a GatsbyImage component if the image is dynamic */}
@@ -20,7 +21,7 @@ export const ComputerFamily = ({title, body, button}) => {
         placeholder= "blurred"
         // This is a presentational image, so the alt should be an empty string
         alt=""
-        src={"../images/banner-1.jpg"}
+        src={"../images/banner-2.jpg"}
         formats={["auto", "webp", "avif"]}
       />
       <div className="container container-cover"
@@ -35,12 +36,13 @@ export const ComputerFamily = ({title, body, button}) => {
       >
         {/* Any content here will be centered in the component */}
         <ColumnContainer>
-          <Column columnWidth="6">
-          <TitleHTMLBodyButton
-                  title = {title}
-                  button = {button}
-                  />
-          </Column>
+          <div className="right-section">
+            <TitleHTMLBodyButton
+                    title = {title}
+                    body = {body}
+                    button = {button}
+                    />
+          </div>
         </ColumnContainer>
       </div>
     </div>
