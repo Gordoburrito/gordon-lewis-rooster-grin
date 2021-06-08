@@ -1,0 +1,21 @@
+.hero-container {
+  display:flex;
+  justify-content: center;
+}
+
+.hero {
+  flex-direction: column;
+  text-align: center;
+  margin: var(--spacing-32) 0;
+}
+
+.hero__heading {
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
+
+.hero__subheading {
+  letter-spacing: 5px;
+}
