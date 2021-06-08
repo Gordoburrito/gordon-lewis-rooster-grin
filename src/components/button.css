@@ -1,0 +1,30 @@
+.btn {
+  padding: 1em 2em;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  box-sizing: padding-box;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: white;
+  text-transform: uppercase;
+}
+
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: white;
+  text-transform: uppercase;
+}
+
+.btn--tertiary{
+  font-size: 1.15rem;
+  letter-spacing: 0px;
+  padding: 0;
+}
+.btn--tertiary::before {
+  content: "> "
+}

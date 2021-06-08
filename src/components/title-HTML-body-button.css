@@ -1,0 +1,31 @@
+.section__title {
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+}
+
+.section__body {
+  margin: var(--spacing-6) 0 var(--spacing-6);
+}
+
+.section {
+  margin: var(--spacing-16) 0 var(--spacing-10);
+}
+
+@media (min-width: 768px){
+  .section__body {
+    margin: var(--spacing-6) 0 var(--spacing-6) 0 ;
+  }
+  
+  .section {
+    margin: var(--spacing-24) var(--spacing-10) var(--spacing-24) 0;
+  }
+}
+@media (min-width: 1200px ){
+  .section {
+    margin: var(--spacing-32) var(--spacing-10) var(--spacing-32) 0;
+  }
+}
+@media (min-width: 1440px) {
+
+}

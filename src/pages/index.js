@@ -13,55 +13,50 @@ import { Cover } from "../components/cover.component"
 import { Container } from "../components/container.component"
 import { ColumnContainer } from "../components/column-container.component"
 import { Carousel } from "../components/carousel.component"
-
+import { SectionImage } from "../components/section-image.component"
+import { IconList} from "../components/icon-list.component"
+import { SuperHero } from "../components/super-hero.component" 
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
-
     return (
     <>
-      <div className = "hero-container background-image">
-        <div className="container">
-          <Hero 
-            image="../images/img-1.jpg" 
-            heading="WELCOME TO" 
-            subheading="Rooster Grin" 
-            button={{text:"hello", url:"#", style:"primary"}}/>
-        </div>
-      </div>
+    <SuperHero
+      heading="WELCOME TO" 
+      subheading="Rooster Grin" 
+      button={{text:"hello", url:"#", style:"primary"}}
+    />
 
-      <div className = "helping-hand-container">
-        <ColumnContainer columnNumber="12">
-          <Column columnWidth="6">
-            <TitleHTMLBodyButton
-                title = "Lorem Ipsum"
-                body = "Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula, lacus est vehicula donec. Quam in ac quam. Duis et, non arcu imperdiet sem tellus suspendisse. Condimentum non aliquet sed, quisque risus vitae semper duis feugiat ."
-                button = {{text:"hello", url:"#", style:"primary"}}
-              />
-          </Column>
-          <Column columnWidth="6">
-            <StaticImage
-                className="bio-avatar"
-                layout="fixed"
-                formats={["AUTO", "WEBP", "AVIF"]}
-                src="../images/img-1.jpg"
-                width={50}
-                height={50}
-                quality={95}
-                alt="Profile picture"
-              />
-          </Column>
-        </ColumnContainer>
-      </div>
+    <div className = "helping-hand-container">
+      <ColumnContainer columnNumber="12">
+        <Column columnWidth="6">
+          <TitleHTMLBodyButton
+              title = "Lorem Ipsum"
+              body = "Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula, lacus est vehicula donec. Quam in ac quam. Duis et, non arcu imperdiet sem tellus suspendisse. Condimentum non aliquet sed, quisque risus vitae semper duis feugiat ."
+              button = {{text:"Lorem Ipsum", url:"#", style:"primary"}}
+            />
+        </Column>
+        <Column columnWidth="6">
+          <div className="section-image">
+          <StaticImage
+            src="../images/img-1.jpg"
+            alt="A dinosaur"
+            placeholder="blurred"
+            layout="constrained"
+          />
+          </div>
+        </Column>
+      </ColumnContainer>
+    </div>
 
       <div className="computer computer-cover background-image">
         <ColumnContainer columnNumber="12">
           <Column columnWidth="6">
             <TitleHTMLBodyButton
                 title = "Lorem Ipsum"
-                button = {{text:"hello", url:"#", style:"primary"}}
+                button = {{text:"BUTTON BUTTON", url:"#", style:"secondary"}}
               />
           </Column>
         </ColumnContainer>
@@ -73,25 +68,24 @@ const BlogIndex = ({ data, location }) => {
             <TitleHTMLBodyButton
                 title = "Lorem Ipsum"
                 body = "Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula, lacus est vehicula donec. Quam in ac quam. Duis et, non arcu imperdiet sem tellus suspendisse. Condimentum non aliquet sed, quisque risus vitae semper duis feugiat ."
-                button = {{text:"hello", url:"#", style:"tertiary"}}
+                button = {{text:"Lorem Ipsum", url:"#", style:"tertiary"}}
               />
           </Column>
           <Column columnWidth="6">
-            <StaticImage
-                className="bio-avatar"
-                layout="fixed"
-                formats={["AUTO", "WEBP", "AVIF"]}
-                src="../images/img-1.jpg"
-                width={50}
-                height={50}
-                quality={95}
-                alt="Profile picture"
-              />
+            <IconList   icons={[
+                {name: "Lorem",
+                icon: "img"},
+                {name: "Lorem Ipsum",
+                icon: "img"},
+                {name: "Lorem Ipsum",
+                icon: "img"},
+                {name: "Lorem",
+                icon: "img"},
+            ]}/>
           </Column>
         </ColumnContainer>
       </div>
       
-
       <div className="happy-girl background-image">
         <ColumnContainer columnNumber="12">
           <Column columnWidth="6"></Column>
@@ -99,7 +93,7 @@ const BlogIndex = ({ data, location }) => {
             <TitleHTMLBodyButton
                 title = "Lorem Ipsum"
                 body = "Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula, lacus est vehicula donec. Quam in ac quam. Duis et, non arcu imperdiet sem tellus suspendisse. Condimentum non aliquet sed, quisque risus vitae semper duis feugiat ."
-                button = {{text:"hello", url:"#", style:"primary"}}
+                button = {{text:"hello", url:"#", style:"secondary"}}
               />
           </Column>
         </ColumnContainer>
