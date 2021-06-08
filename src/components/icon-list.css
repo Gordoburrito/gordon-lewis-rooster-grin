@@ -1,5 +1,10 @@
 .icon-background {
   background-color: var(--color-accent);
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-width: 50vw;
 }
 
 .icon-list__icon {
@@ -9,7 +14,6 @@
 }
 
 .icon-list {
-
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -30,10 +34,16 @@
   padding-left: 1rem;
 }
 
-@media (min-width: 768px){
+@media (min-width: 800px){
+
+  .icon-background {
+    justify-content: flex-start;
+  }
+
   .icon-list {
     flex-flow: row wrap;
     justify-content: space-between;
+    
   }
   .icon-list__item {
     flex-direction: column;

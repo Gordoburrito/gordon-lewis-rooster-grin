@@ -62,7 +62,7 @@
   --color-secondary: #FF7218;
   --color-text: #161616;
   --color-text-light: #4f5969;
-  --color-heading: #1a202c;
+  --color-heading: #3E3E3E;
   --color-heading-black: black;
   --color-accent: #d1dce5;
   overflow-x: hidden;
@@ -170,14 +170,11 @@ a:focus {
   background-color: #9baab3;
 }
 .section-image{
-  background: #1a202c;
+  display:flex;
   height: 100%;
-  min-height: 400px;
+  min-height: 100%;
   width: 100%;
 }
-
-
-
 
 .container {
   width: var(--maxWidth-wrapper);
@@ -206,6 +203,7 @@ a:focus {
   .column-container{
     grid-template-columns: repeat(calc(var(--columns)), 1fr);
   }
+
   .section-image {
     margin-left: -15px;
     width: calc(50vw);

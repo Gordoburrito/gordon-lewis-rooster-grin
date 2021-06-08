@@ -10,14 +10,14 @@ import { TitleHTMLBodyButton } from "../components/title-HTML-body-button.compon
 import { CarouselBlurb } from "../components/carousel-blurb.component"
 import { Column } from "../components/column.component"
 import { Cover } from "../components/cover.component"
-import { Container } from "../components/container.component"
 import { ColumnContainer } from "../components/column-container.component"
 import { Carousel } from "../components/carousel.component"
-import { SectionImage } from "../components/section-image.component"
 import { IconList} from "../components/icon-list.component"
 import { SuperHero } from "../components/super-hero.component" 
 import { ComputerFamily } from "../components/computer-family.component"
 import { HappyGirl } from "../components/happy-girl.component"
+import { Footer } from "../components/footer.component"
+import logoWhite from "../images/logo-white.svg"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -25,10 +25,11 @@ const BlogIndex = ({ data, location }) => {
 
     return (
     <>
+      <logoWhite/>
       <SuperHero
         heading="WELCOME TO" 
         subheading="Rooster Grin" 
-        button={{text:"hello", url:"#", style:"primary"}}
+        button={{text:"Button button", url:"#", style:"primary"}}
       />
 
       <div className = "helping-hand-container">
@@ -37,17 +38,17 @@ const BlogIndex = ({ data, location }) => {
             <TitleHTMLBodyButton
                 title = "Lorem Ipsum"
                 body = "Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula, lacus est vehicula donec. Quam in ac quam. Duis et, non arcu imperdiet sem tellus suspendisse. Condimentum non aliquet sed, quisque risus vitae semper duis feugiat ."
-                button = {{text:"Lorem Ipsum", url:"#", style:"primary"}}
+                button = {{text:"Lorem Ipsum", url:"#", style:"tertiary"}}
               />
           </Column>
           <Column columnWidth="6">
             <div className="section-image">
-            <StaticImage
-              src="../images/img-1.jpg"
-              alt="A dinosaur"
-              placeholder="blurred"
-              layout="constrained"
-            />
+              <StaticImage
+                src="../images/img-1.jpg"
+                alt="two silhouettes in the sunset helping each other climb a mountain"
+                placeholder="blurred"
+                layout="constrained"
+              />
             </div>
           </Column>
         </ColumnContainer>
@@ -126,6 +127,7 @@ const BlogIndex = ({ data, location }) => {
               </Carousel>
           </Column>
         </ColumnContainer>
+        <Footer/>
       </div>
 
         </>
