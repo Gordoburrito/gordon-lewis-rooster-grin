@@ -6,11 +6,19 @@
   align-content: center;
   min-width: 50vw;
 }
+.icon-list__icon-wrapper {
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+}
 
 .icon-list__icon {
-  width:100px;
-  height: 100px;
-  background-color: blue;
+  align-content: center;
+  margin: auto;
+  width:65%;
+  height: 65%;
 }
 
 .icon-list {

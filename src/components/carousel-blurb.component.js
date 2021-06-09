@@ -1,4 +1,5 @@
 import React from "react"
+import './carousel-blurb.css'
 
 export const CarouselBlurb = ({ name, date, quote }) => {
   return (

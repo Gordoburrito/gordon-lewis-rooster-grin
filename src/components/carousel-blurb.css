@@ -1,0 +1,5 @@
+.blurb__author{
+  font-weight: var(--fontWeight-bold);
+  color: var(--color-primary);
+  text-align: center;
+}

@@ -8,7 +8,7 @@ export const TitleHTMLBodyButton = ({ title, body, button }) => {
   }
 
   return (
-    <section class="section">
+    <section className="section">
       {title ? <h3 className="section__title">{title}</h3> : "" }
       {body ? <div className="section__body" dangerouslySetInnerHTML={createMarkup(body)}/> : "" }
       {button ? <Button button={button}/> : ""}

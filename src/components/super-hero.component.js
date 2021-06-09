@@ -2,6 +2,10 @@ import React from "react"
 
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "../components/button.component"
+import NavBar from "../components/navbar.component"
+import LogoWhite from "../assets/logo-white.svg"
+import { Link } from "gatsby"
+import './hero.css'
 
 export const SuperHero = ({heading, subheading, button}) => {
   return (
@@ -10,11 +14,11 @@ export const SuperHero = ({heading, subheading, button}) => {
       <StaticImage
         style={{
           gridArea: "1/1",
-          maxHeight: 600,
+          maxHeight: 700,
         }}
         className="cover-image"
         layout="fullWidth"
-        aspectRatio={2 / 1}
+        aspectRatio={1440 / 700}
         placeholder= "blurred"
         // This is a presentational image, so the alt should be an empty string
         alt=""
@@ -32,7 +36,13 @@ export const SuperHero = ({heading, subheading, button}) => {
         }}
       >
         {/* Any content here will be centered in the component */}
+        <nav className="nav">
+          <Link to="/">
+            <LogoWhite/>
+          </Link>
+        </nav>
         <div className="hero">
+          
           <h1 className="hero__heading">{heading}</h1>
           <h2 className="hero__subheading">{subheading}</h2>
           <Button button = {button}/>
