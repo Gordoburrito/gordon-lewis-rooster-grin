@@ -193,7 +193,25 @@ a:focus {
   grid-gap: 30px;
 }
 
+.overlay {
+  grid-area: 0;
+  background-color: rgba(0, 0, 0, .7);
+}
 
+.overlay .section__body {
+  color: white;
+}
+
+.overlay .section__title {
+  color: var(--color-secondary);
+}
+
+.hygiene {
+  margin-bottom: 5rem;
+}
+.helping-hand-container{
+  margin-bottom: 5rem;
+}
 /* Media queries */
 
 
@@ -210,6 +228,19 @@ a:focus {
     margin-left: -15px;
     width: calc(50vw);
   }
+
+  .overlay .section__body {
+    color: var(--color-text);
+  }
+  
+  .overlay .section__title {
+    color: var(--color-primary);
+  }
+
+  .overlay {
+    background-color: rgba(255, 0, 0, 0.0);
+  }
+
 }
 
 @media (min-width: 1200px ){

@@ -8,6 +8,7 @@ import {ColumnContainer} from "./column-container.component"
 
 export const HappyGirl = ({title, body, button}) => {
   return (
+    
     <div style={{ display: "grid" }}>
       {/* You can use a GatsbyImage component if the image is dynamic */}
       <StaticImage
@@ -24,7 +25,7 @@ export const HappyGirl = ({title, body, button}) => {
         src={"../images/banner-2.jpg"}
         formats={["auto", "webp", "avif"]}
       />
-      <div className="container container-cover"
+      <div className="overlay"
         style={{
           // By using the same grid area for both, they are stacked on top of each other
           gridArea: "1/1",

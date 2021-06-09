@@ -2,6 +2,8 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+import "../components/testimonials.css";
+
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -49,8 +51,8 @@ function useOnScreen(options) {
 }
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  // const siteTitle = data.site.siteMetadata?.title || `Title`
+  // const posts = data.allMarkdownRemark.nodes
 
   const [setRef, visible] = useOnScreen({threshold: 0.5})
 
@@ -125,7 +127,7 @@ const BlogIndex = ({ data, location }) => {
         <ColumnContainer columnNumber="12">
           <Column columnWidth="6">
             <TitleHTMLBodyButton
-                title = "LOREM IPSUM"
+                title = "LOREM IPSUM DOLOR SIT AMET"
                 body = {`
                 <svg width="177" height="26" viewBox="0 0 177 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5508 0L9.37398 8.48092L0 9.85252L6.79161 16.4525L5.16553 25.7625L13.5508 21.3623L21.9365 25.7625L20.31 16.4525L27.1017 9.85252L17.7281 8.48092L13.5508 0Z" fill="#FF7218"/>

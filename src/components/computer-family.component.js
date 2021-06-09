@@ -23,7 +23,7 @@ export const ComputerFamily = ({title, body, button}) => {
         src={"../images/banner-1.jpg"}
         formats={["auto", "webp", "avif"]}
       />
-      <div className="container container-cover"
+      <div className="overlay"
         style={{
           // By using the same grid area for both, they are stacked on top of each other
           gridArea: "1/1",
