@@ -24,10 +24,35 @@ import IconHygiene from "../assets/home-hygiene.svg"
 import IconLab from "../assets/home-lab.svg"
 import IconRetention from "../assets/home-retention.svg"
 
+function useOnScreen(options) {
+    const [ref, setRef] = React.useState(null);
+  const [visible, setVisible]= React.useState(false);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(([entry])=> {
+      setVisible(entry.isIntersecting);
+    }, options);
+
+    if (ref ) {
+      observer.observe(ref)
+    }
+
+    return () => {
+      if (ref) {
+        observer.unobserve(ref);
+      }
+    };
+
+  }, [ref, options])
+
+  return [setRef, visible];
+}
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
+
+  const [setRef, visible] = useOnScreen({threshold: 0.5})
 
     return (
     <>
@@ -74,7 +99,7 @@ const BlogIndex = ({ data, location }) => {
               />
           </Column>
           <Column columnWidth="6">
-            <div className="icon-background">
+            <div ref={setRef} className={`icon-background ${visible ? "inView": ""}`}>
               <IconList   icons={[
                   {name: "Expertise",
                   icon: "<Facebook/>",

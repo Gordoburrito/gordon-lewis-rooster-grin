@@ -9,7 +9,7 @@ import './hero.css'
 
 export const SuperHero = ({heading, subheading, button}) => {
   return (
-    <div style={{ display: "grid" }}>
+    <div className="hero-background" style={{ display: "grid" }}>
       {/* You can use a GatsbyImage component if the image is dynamic */}
       <StaticImage
         style={{
@@ -36,16 +36,15 @@ export const SuperHero = ({heading, subheading, button}) => {
         }}
       >
         {/* Any content here will be centered in the component */}
-        <nav className="nav">
+        <nav className="nav animate-fade-in">
           <Link to="/">
             <LogoWhite/>
           </Link>
         </nav>
         <div className="hero">
-          
-          <h1 className="hero__heading">{heading}</h1>
-          <h2 className="hero__subheading">{subheading}</h2>
-          <Button button = {button}/>
+          <h1 className="hero__heading animate-fade-in">{heading}</h1>
+          <h2 className="hero__subheading animate-fade-in">{subheading}</h2>
+          <Button styleName="btn--hero animate-fade-in"button = {button}/>
         </div>
       </div>
     </div>
