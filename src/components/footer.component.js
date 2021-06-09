@@ -12,10 +12,14 @@ export const Footer = ({ children}) => {
         </div>
         <div className="footer__social-link-list">
           <div className="footer__social-link-list__item">
-            <Instagram/>
+            <a href="#">
+              <Instagram/>
+            </a>
           </div>
           <div className="footer__social-link-list__item">
-            <Facebook/>
+          <a href="#">
+              <Facebook/>
+            </a>
           </div>
         </div>
       </div>

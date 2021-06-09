@@ -32,4 +32,9 @@
   width: 3rem;
   height: 3rem;
   cursor: pointer;
+  transition: .3s;
+}
+
+.footer__social-link-list__item:hover{
+  transform: scale(1.1);
 }
