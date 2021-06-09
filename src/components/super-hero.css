@@ -4,8 +4,6 @@
   transform: translateY(-2rem) ;
 }
 
-/* Animations */
-
 @keyframes no-transform {
   100% {
     opacity: 1;
@@ -18,6 +16,7 @@
   width: 286px;
   height: 48px;
   top: 33px;
+    animation-delay: .6s;
 }
 
 .hero-container {
@@ -29,10 +28,6 @@
   flex-direction: column;
   text-align: center;
   margin: var(--spacing-32) 0;
-}
-
-.nav {
-  animation-delay: .6s;
 }
 
 .hero__heading {
@@ -57,10 +52,6 @@
   animation-delay: 1s;
 }
 
-@media (min-width: 350px){
-
-}
-
 @media (min-width: 600px){
   .nav {
     left: 0px;
@@ -77,12 +68,4 @@
     font-size: 4rem;
     margin-bottom: 1.5rem;
   }
-}
-
-@media (min-width: 1200px ){
-
-}
-
-@media (min-width: 1440px) {
-  
 }

@@ -1,15 +1,10 @@
 
-.right-section > .section {
+.column-container__right-section > .section {
   margin-right: 0;
 }
 
-.right-section {
+.column-container__right-section {
   grid-column: span 6;
-}
-
-
-@media (min-width: 350px){
-
 }
 
 @media (min-width: 768px){
@@ -19,18 +14,8 @@
     width: calc(50vw);
   }
 
-  .right-section {
+  .column-container__right-section {
     grid-column: 7/13;
   }
-}
-
-@media (min-width: 1200px ){
-  :root{
-    --maxWidth-wrapper: var(--maxWidth-4xl);
-    --fontSize-4: 2.5rem
-  }
-}
-
-@media (min-width: 1440px) {
- 
+  
 }

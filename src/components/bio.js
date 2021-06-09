@@ -1,4 +1,5 @@
 /**
+ * Was included with the starter and is really ingrained in the build
  * Bio component that queries for data
  * with Gatsby's useStaticQuery component
  *
