@@ -2,19 +2,23 @@ import React from "react"
 
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "../components/button.component"
+import NavBar from "../components/navbar.component"
+import LogoWhite from "../assets/logo-white.svg"
+import { Link } from "gatsby"
+import './hero.css'
 
 export const SuperHero = ({heading, subheading, button}) => {
   return (
-    <div style={{ display: "grid" }}>
+    <div className="hero-background" style={{ display: "grid" }}>
       {/* You can use a GatsbyImage component if the image is dynamic */}
       <StaticImage
         style={{
           gridArea: "1/1",
-          maxHeight: 600,
+          maxHeight: 700,
         }}
         className="cover-image"
         layout="fullWidth"
-        aspectRatio={2 / 1}
+        aspectRatio={1440 / 700}
         placeholder= "blurred"
         // This is a presentational image, so the alt should be an empty string
         alt=""
@@ -32,10 +36,15 @@ export const SuperHero = ({heading, subheading, button}) => {
         }}
       >
         {/* Any content here will be centered in the component */}
+        <nav className="nav animate-fade-in">
+          <Link to="/">
+            <LogoWhite/>
+          </Link>
+        </nav>
         <div className="hero">
-          <h1 className="hero__heading">{heading}</h1>
-          <h2 className="hero__subheading">{subheading}</h2>
-          <Button button = {button}/>
+          <h1 className="hero__heading animate-fade-in">{heading}</h1>
+          <h2 className="hero__subheading animate-fade-in">{subheading}</h2>
+          <Button styleName="btn--hero animate-fade-in"button = {button}/>
         </div>
       </div>
     </div>

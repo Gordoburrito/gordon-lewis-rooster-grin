@@ -3,6 +3,7 @@
   margin-right: 0;
 }
 
+
 @media (min-width: 350px){
 
 }
@@ -11,13 +12,16 @@
   .column-container{
     grid-template-columns: repeat(calc(var(--columns)), 1fr);
   }
+
   .section-image {
     margin-left: -15px;
     width: calc(50vw);
   }
+
   .right-section {
     grid-column: 7/13;
   }
+  
 }
 
 @media (min-width: 1200px ){

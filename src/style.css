@@ -59,12 +59,14 @@
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
   --color-primary: #613476;
+  --color-primary-hover: #835C96;
   --color-secondary: #FF7218;
   --color-text: #161616;
   --color-text-light: #4f5969;
   --color-heading: #3E3E3E;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+  --color-white-high-emphasis: white;
   overflow-x: hidden;
 }
 
@@ -191,7 +193,28 @@ a:focus {
   grid-gap: 30px;
 }
 
+.overlay {
+  grid-area: 0;
+  background-color: rgba(0, 0, 0, .7);
+}
 
+.overlay .section__body {
+  color: white;
+}
+
+.overlay .section__title {
+  color: var(--color-secondary);
+}
+
+.hygiene {
+  margin-bottom: 5rem;
+}
+.helping-hand-container{
+  margin-bottom: 5rem;
+}
+.testimonials {
+  margin: 4.5rem 0;
+}
 /* Media queries */
 
 
@@ -200,6 +223,13 @@ a:focus {
 }
 
 @media (min-width: 768px){
+  .hygiene {
+    margin-bottom: 0;
+  }
+  .helping-hand-container{
+    margin-bottom: 0;
+  }
+
   .column-container{
     grid-template-columns: repeat(calc(var(--columns)), 1fr);
   }
@@ -208,6 +238,19 @@ a:focus {
     margin-left: -15px;
     width: calc(50vw);
   }
+
+  .overlay .section__body {
+    color: var(--color-text);
+  }
+  
+  .overlay .section__title {
+    color: var(--color-primary);
+  }
+
+  .overlay {
+    background-color: rgba(255, 0, 0, 0.0);
+  }
+
 }
 
 @media (min-width: 1200px ){
