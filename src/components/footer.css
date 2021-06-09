@@ -31,4 +31,5 @@
 .footer__social-link-list__item{
   width: 3rem;
   height: 3rem;
+  cursor: pointer;
 }

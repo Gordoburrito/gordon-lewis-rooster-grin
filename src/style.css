@@ -212,6 +212,9 @@ a:focus {
 .helping-hand-container{
   margin-bottom: 5rem;
 }
+.testimonials {
+  margin: 4.5rem 0;
+}
 /* Media queries */
 
 
@@ -220,6 +223,13 @@ a:focus {
 }
 
 @media (min-width: 768px){
+  .hygiene {
+    margin-bottom: 0;
+  }
+  .helping-hand-container{
+    margin-bottom: 0;
+  }
+
   .column-container{
     grid-template-columns: repeat(calc(var(--columns)), 1fr);
   }
