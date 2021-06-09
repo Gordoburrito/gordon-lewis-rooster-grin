@@ -16,7 +16,7 @@
   width: 286px;
   height: 48px;
   top: 33px;
-    animation-delay: .6s;
+  animation-delay: .6s;
 }
 
 .hero-container {
@@ -36,8 +36,8 @@
   -webkit-text-stroke-color: var(--color-white-high-emphasis);
   margin: 0 auto;
   font-size: var(--fontSize-7);
-  animation-delay: .8s;
   font-weight: var(--fontWeight-bold);
+  animation-delay: .8s;
 }
 
 .hero__subheading {

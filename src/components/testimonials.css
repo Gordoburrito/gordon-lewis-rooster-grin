@@ -2,6 +2,11 @@
   margin-top: 6rem;
   text-align: center;
 }
+
+.testimonials .section__title {
+  color: var(--color-heading);
+}
+
 @media (min-width: 768px){
   .testimonials .section{
     text-align: left;
