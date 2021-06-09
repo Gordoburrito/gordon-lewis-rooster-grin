@@ -2,6 +2,7 @@ import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
 import "../components/testimonials.css";
+import "../components/hygiene.css";
 
 import Seo from "../components/seo"
 import { TitleHTMLBodyButton } from "../components/title-HTML-body-button.component"
